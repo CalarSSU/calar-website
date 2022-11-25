@@ -1,0 +1,588 @@
+@import "reset.css?v=0.0.9";
+
+
+
+
+section {
+    height: 100vh;
+}
+section .container {
+    height: 100%;
+}
+.header {
+    padding: 80px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 3px;
+}
+.logo__r {
+    font-family: 'Ledger', serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.logo__r strong{
+    font-family: 'Roboto Slab', serif;
+}
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: calc(100vh - 115.5px);
+    padding: 0 0 80px;
+    gap: 150px;
+}
+h1 {
+    color: #504F4F;
+    font-weight: 500;
+    font-size: 84px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.main__text-p {
+    font-family: 'Ledger', serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    width: 746px;
+    margin: 30px auto 0 auto;
+}
+.main__btn {
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: capitalize;
+    color: #000000;
+    position: relative;
+}
+.main__btn:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+.main__btn:focus:after,
+.main__btn:hover:after {
+    width: 100%;
+}
+#dector2 .main__btn:after {
+    background-color: #171B6C;
+}
+#dector3 .main__btn:after {
+    background-color: #FFAD0F;
+}
+
+
+.main__text span {
+    pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+    .main__text-p {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 40px 0 0;
+    }
+    .main__wrapper {
+        height: calc(100vh - 75.5px);
+        padding: 0 0 40px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .logo {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    .logo__r {
+        font-size: 12px;
+    }
+    .main__text-p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .header {
+        padding: 20px 0 0;
+    }
+    .main__wrapper {
+        gap: 75px;
+        height: calc(100vh - 46.5px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+#dector2 {
+    background: #D4DBE9;
+}
+#dector2 * {
+    color: #171B6C;
+}
+#dector2 .main__text span {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #171B6C;
+}
+#dector2 h1 {
+    color: #363C86;
+}
+#dector2 .main__text-p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    margin: 0 auto;
+    width: 624px;
+    letter-spacing: 1.2px;
+}
+.input__form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+}
+.progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 7px;
+    background-color: #171B6C;
+    opacity: 0;
+    transition: opacity .2s;
+    z-index: 1;
+    width: 33%;
+}
+.progress.active {
+    opacity: 1;
+}
+.progress.orange {
+    background-color: #FFAD0F;
+}
+.progress.green {
+    background-color: #407342;
+}
+.input__form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.input__form-item1 {
+    width: 35%;
+}
+.input__form-item2 {
+    width: 25%;
+}
+.input__form-item3 {
+    width: 15%;
+}
+.main__text {
+    width: 100%;
+    position: relative;
+}
+.input__form-item p {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+}
+select, input {
+    background: transparent;
+    border: 3px solid #171B6C;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 14px;
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#dector2 input::placeholder {
+    color: #757BAE;
+    font-family: 'Open Sans', sans-serif;
+}
+select {
+    -moz-appearance: none;
+	-webkit-appearance: none;
+}
+.select__box {
+    position: relative;
+    width: 100%;
+}
+.select__arr {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #171B6C;
+}
+@media screen and (max-width: 992px) {
+    .input__form {
+        align-items: flex-end;
+    }
+    .input__form-item1 {
+        width: 40%;
+    }
+    .input__form-item2 {
+        width: 30%;
+    }
+    .input__form-item3 {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .input__form {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .input__form-item {
+        width: 100%;
+        gap: 7px;
+    }
+    #dector2 .main__wrapper {
+        gap: 60px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .input__form {
+        margin: 25px 0 0 0;
+    }
+    #dector2 h1 {
+        font-size: 42px;
+    }
+    #dector2 .main__text-p {
+        font-size: 14px;
+    }
+    #dector2 .main__text span {
+        font-size: 28px;
+    }
+    .input__form-item p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 375px) {
+    #dector2 .main__wrapper {
+        gap: 25px;
+    }
+    .input__form {
+        margin: 10px 0 0 0;
+    }
+    select, input {
+        border: 2px solid #171B6C;
+        height: 43px;
+        font-size: 14px;
+    }
+    #dector2 h1 {
+        font-size: 32px;
+    }
+}
+
+
+
+
+#dector3 .progress {
+    width: 66%;
+    background-color: #FFAD0F;
+}
+#dector3 {
+    background-color: #FEF2E1;
+}
+#dector3 * {
+    color: #FFAD0F;
+}
+#dector3 .main__text span {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #FFAD0F;
+}
+#dector3 select, #dector3 input {
+    border: 3px solid #FFAD0F;
+}
+#dector3 .select__arr {
+    background-color: #FFAD0F;
+}
+#dector3 input::placeholder {
+    color: #FFCC67;
+}
+#dector3 .main__text h5 {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+}
+#dector3 .main__text-p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0 auto;
+    width: 600px;
+    letter-spacing: .89px;
+}
+#dector3 .input__form {
+    justify-content: center;
+    margin: 50px 0 0 0;
+    gap: 70px;
+}
+#dector3 .input__form-item {
+    width: 32%;
+}
+
+@media screen and (max-width: 768px) {
+    #dector3 h1 {
+        font-size: 68px;
+    }
+    #dector3 .input__form {
+        justify-content: space-around;
+        gap: 20px;
+    }
+    #dector3 .input__form-item {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 576px) {
+    #dector3 h1 {
+        font-size: 44px;
+    }
+    #dector3 .main__text-p {
+        font-size: 14px;
+    }
+    #dector3 .input__form-item {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 375px) {
+    #dector3 .main__text span {
+        font-size: 28px;
+    }
+    #dector3 h1 {
+        font-size: 38px;
+    }
+    #dector3 .main__text h5 {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+#dector4 .progress {
+    width: 100%;
+    background-color: #407342;
+}
+#dector4 {
+    background-color: #E5F6E8;
+}
+#dector4 * {
+    color: #407342;
+}
+#dector4 .main__text span {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #407342;
+}
+#dector4 .select__arr {
+    background-color: #407342;
+}
+#dector4 input::placeholder {
+    color: #FFCC67;
+}
+#dector4 .main__text-p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0 auto;
+}
+#dector4 .main__text h4 {
+    font-weight: 700;
+    font-size: 29px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 100px auto 50px auto;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.btn__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 186px;
+}
+.btn_1,
+.btn_2 {
+    background: transparent;
+    border: 3px solid #407342;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 14px;
+    width: 300px;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s;
+}
+/* .btn__box button:focus {
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 25%);
+    transform: translateY(3px);
+} */
+#dector4 .main__wrapper {
+    justify-content: center;
+}
+.btn__wrap {
+    width: 300px;
+    height: 48px;
+}
+.btn_1:after {
+    content:"Скопировать";
+}
+.btn_2:after {
+    content:"Скачать";
+}
+.onclic {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    border-color:rgb(163, 163, 163);
+    border-width:3px;
+    font-size:0;
+    border-radius: 50%;
+    border-left-color: #407342;
+    animation: rotating 2s 0.25s linear infinite;
+    box-shadow: none;
+    /* background-color: #407342; */
+}
+  
+.onclic:after {
+    content:"";
+}
+.onclic:hover {
+    color: transparent;
+}
+.validate {
+    background: transparent;
+}
+.validate:after {
+    content: url(../img/arr.svg);
+    height: 30px;
+    width: 30px;
+}
+  
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .btn__box {
+        gap: 40px;
+    }
+    #dector2 .main__text-p,
+    #dector3 .main__text-p {
+        width: auto;
+    }
+}
+ 
+@media screen and (max-width: 576px) {
+    .btn__box {
+        flex-direction: column;
+        gap: 25px;
+    }
+    #dector4 .main__text h4 {
+        font-size: 18px;
+    }    
+    #dector4 .main__text-p {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 375px) {
+    #dector4 .main__text span {
+        font-size: 28px;
+    }
+    .btn__box button {
+        border: 2px solid #407342;
+        font-size: 14px;
+    }
+    #dector4 h1 {
+        font-size: 42px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 950px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 520px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+}
