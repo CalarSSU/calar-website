@@ -1,8 +1,5 @@
 @import "reset.css?v=0.0.9";
 
-
-
-
 section {
     height: 100vh;
 }
@@ -16,7 +13,7 @@ section .container {
     justify-content: space-between;
 }
 .logo {
-    font-size: 24px;
+    font-size: 3vmin;
     text-transform: uppercase;
     color: #000000;
     letter-spacing: 3px;
@@ -36,19 +33,19 @@ section .container {
     justify-content: flex-end;
     height: calc(100vh - 115.5px);
     padding: 0 0 80px;
-    gap: 150px;
+    gap: 20%;
 }
 h1 {
     color: #504F4F;
     font-weight: 500;
-    font-size: 84px;
+    font-size: 6vmin;
     text-align: center;
     text-transform: uppercase;
 }
 .main__text-p {
     font-family: 'Ledger', serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 2.5vmin;
     text-align: center;
     width: 746px;
     margin: 30px auto 0 auto;
@@ -102,9 +99,9 @@ h1 {
         height: calc(100vh - 75.5px);
         padding: 0 0 40px;
     }
-    h1 {
+    /* h1 {
         font-size: 50px;
-    }
+    } */
     .logo {
         font-size: 18px;
         letter-spacing: 2px;
@@ -121,20 +118,10 @@ h1 {
         padding: 20px 0 0;
     }
     .main__wrapper {
-        gap: 75px;
+        /* gap: 75px; */
         height: calc(100vh - 46.5px);
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 #dector2 {
     background: #D4DBE9;
@@ -145,7 +132,7 @@ h1 {
 #dector2 .main__text span {
     display: block;
     text-align: center;
-    font-size: 40px;
+    font-size: 6vmin;
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1.5px #171B6C;
@@ -156,7 +143,7 @@ h1 {
 #dector2 .main__text-p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 21px;
+    /* font-size: 21px; */
     margin: 0 auto;
     width: 624px;
     letter-spacing: 1.2px;
@@ -229,10 +216,10 @@ select, input {
     color: #757BAE;
     font-family: 'Open Sans', sans-serif;
 }
-select {
+/* select {
     -moz-appearance: none;
 	-webkit-appearance: none;
-}
+} */
 .select__box {
     position: relative;
     width: 100%;
@@ -279,15 +266,15 @@ select {
     .input__form {
         margin: 25px 0 0 0;
     }
-    #dector2 h1 {
+    /* #dector2 h1 {
         font-size: 42px;
-    }
-    #dector2 .main__text-p {
+    } */
+    /* #dector2 .main__text-p {
         font-size: 14px;
-    }
-    #dector2 .main__text span {
+    } */
+    /* #dector2 .main__text span {
         font-size: 28px;
-    }
+    } */
     .input__form-item p {
         font-size: 18px;
     }
@@ -304,9 +291,9 @@ select {
         height: 43px;
         font-size: 14px;
     }
-    #dector2 h1 {
+    /* #dector2 h1 {
         font-size: 32px;
-    }
+    } */
 }
 
 
@@ -325,7 +312,8 @@ select {
 #dector3 .main__text span {
     display: block;
     text-align: center;
-    font-size: 40px;
+    font-size:6vmin;
+    /* font-size: 40px; */
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1.5px #FFAD0F;
@@ -341,7 +329,7 @@ select {
 }
 #dector3 .main__text h5 {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 2vmin;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     margin: 0 auto;
@@ -349,7 +337,7 @@ select {
 #dector3 .main__text-p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    /* font-size: 22px; */
     margin: 0 auto;
     width: 600px;
     letter-spacing: .89px;
@@ -364,9 +352,9 @@ select {
 }
 
 @media screen and (max-width: 768px) {
-    #dector3 h1 {
+    /* #dector3 h1 {
         font-size: 68px;
-    }
+    } */
     #dector3 .input__form {
         justify-content: space-around;
         gap: 20px;
@@ -376,26 +364,26 @@ select {
     }
 }
 @media screen and (max-width: 576px) {
-    #dector3 h1 {
+    /* #dector3 h1 {
         font-size: 44px;
-    }
-    #dector3 .main__text-p {
+    } */
+    /* #dector3 .main__text-p {
         font-size: 14px;
-    }
+    } */
     #dector3 .input__form-item {
         width: 100%;
     }
 }
 @media screen and (max-width: 375px) {
-    #dector3 .main__text span {
+    /* #dector3 .main__text span {
         font-size: 28px;
-    }
-    #dector3 h1 {
+    } */
+    /* #dector3 h1 {
         font-size: 38px;
-    }
-    #dector3 .main__text h5 {
+    } */
+    /* #dector3 .main__text h5 {
         font-size: 14px;
-    }
+    } */
 }
 
 
@@ -415,7 +403,8 @@ select {
 #dector4 .main__text span {
     display: block;
     text-align: center;
-    font-size: 40px;
+    font-size:6vmin;
+    /* font-size: 40px; */
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1.5px #407342;
@@ -429,12 +418,12 @@ select {
 #dector4 .main__text-p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    /* font-size: 22px; */
     margin: 0 auto;
 }
 #dector4 .main__text h4 {
     font-weight: 700;
-    font-size: 29px;
+    font-size: 3vmin;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     margin: 100px auto 50px auto;
@@ -445,7 +434,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 186px;
+    gap: 10%;
 }
 .btn_1,
 .btn_2 {
@@ -530,7 +519,8 @@ select {
 
 @media screen and (max-width: 768px) {
     .btn__box {
-        gap: 40px;
+        flex-direction: column;
+        gap: 25px;
     }
     #dector2 .main__text-p,
     #dector3 .main__text-p {
@@ -546,21 +536,21 @@ select {
     #dector4 .main__text h4 {
         font-size: 18px;
     }    
-    #dector4 .main__text-p {
+    /* #dector4 .main__text-p {
         font-size: 16px;
-    }
+    } */
 }
 @media screen and (max-width: 375px) {
-    #dector4 .main__text span {
+    /* #dector4 .main__text span {
         font-size: 28px;
-    }
+    } */
     .btn__box button {
         border: 2px solid #407342;
         font-size: 14px;
     }
-    #dector4 h1 {
+    /* #dector4 h1 {
         font-size: 42px;
-    }
+    } */
 }
 
 
