@@ -2,10 +2,10 @@ const body = document.querySelector('body');
 const progress = document.querySelector('.progress');
 document.addEventListener('scroll', function() {
     let dectorHeight = document.documentElement.clientHeight;
-    let scrollHeight = window.pageYOffset;
-    let documentHeight = body.clientHeight;
-    let scrollProc = (scrollHeight + dectorHeight) * 100 / documentHeight;
-        if (scrollHeight >= dectorHeight) {
+    let scrollHeight = document.body.scrollTop || document.documentElement.scrollTop;
+    let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollProc = (scrollHeight / documentHeight) * 100;
+        if (scrollHeight >= 0) {
             progress.classList.add('active');
             progress.style.width = scrollProc + '%';
         } else {
@@ -52,12 +52,12 @@ $(function() {
       setTimeout(function() {
         $( ".btn_1" ).removeClass( "onclic" );
         $( ".btn_1" ).addClass( "validate", 450, callback() );
-      }, 2250 );
+      }, 700 );
     }
       function callback() {
         setTimeout(function() {
           $( ".btn_1" ).removeClass( "validate" );
-        }, 1250 );
+        }, 300 );
       }
     });
 
@@ -70,11 +70,11 @@ $(function() {
           setTimeout(function() {
             $( ".btn_2" ).removeClass( "onclic" );
             $( ".btn_2" ).addClass( "validate", 450, callback() );
-          }, 2250 );
+          }, 700 );
         }
           function callback() {
             setTimeout(function() {
               $( ".btn_2" ).removeClass( "validate" );
-            }, 1250 );
+            }, 300 );
           }
         });
