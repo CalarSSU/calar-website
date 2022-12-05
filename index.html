@@ -21,7 +21,7 @@
                 <h1>РАСПИСАНИЕ ЗАНЯТИЙ</h1>
                 <p class="main__text-p">CALAR — это API, позволяющий студентам нашего университета интегрировать  актуальное расписание занятий в любой календарь. Чтобы получить ссылку с индивидуальным расписанием, нажмите кнопку "Начать".</p>
             </div>
-            <a class="main__btn" href="#dector2">Начать</a>
+            <a class="main__btn" href="#dector2" id="btn1">Начать</a>
         </div>
     </div>
 </section>
@@ -43,8 +43,8 @@
                         <p>Учебное  подразделение </p>
                         <div class="select__box">
                             <span class="select__arr"></span>
-                            <select>
-                                <option value="Вариант1">Вариант1</option>
+                            <select id="department">
+                                <option value="knt">Вариант1</option>
                                 <option value="Вариант2">Вариант2</option>
                             </select>
                         </div>
@@ -53,19 +53,19 @@
                         <p>Форма  обучения </p>
                         <div class="select__box">
                             <span class="select__arr"></span>
-                            <select>
-                                <option value="Вариант1">Вариант1</option>
-                                <option value="Вариант2">Вариант2</option>
+                            <select id="map_form">
+                                <option value="do">Очная форма</option>
+                                <option value="zo">Заочная форма</option>
                             </select>
                         </div>
                     </div>
                     <div class="input__form-item input__form-item3">
                         <p>Группа</p>
-                        <input type="text" placeholder="введите">
+                        <input type="text" id="group" placeholder="введите">
                     </div>
                 </form>
             </div>
-            <a class="main__btn" href="#dector3">Далее</a>
+            <a class="main__btn" href="#dector3" id="btn2">Далее</a>
         </div>
     </div>
 </section>
@@ -84,9 +84,9 @@
                 <form class="input__form" action="#">
                     <div class="input__form-item input__form-item1">
                         <p>Подгруппа</p>
-                        <input type="text" placeholder="введите">
+                        <input type="text" placeholder="введите" id="subgroup">
                     </div>
-                    <div class="input__form-item input__form-item2">
+                    <!-- <div class="input__form-item input__form-item2">
                         <p>Доп. образование</p>
                         <div class="select__box">
                             <span class="select__arr"></span>
@@ -95,14 +95,14 @@
                                 <option value="Вариант2">Вариант2</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                 </form>
             </div>
-            <a class="main__btn" href="#dector4">получить</a>
+            <a class="main__btn" href="#dector4" id="btn3">получить</a>
         </div>
     </div>
 </section>
-<section id="dector4">
+<section id="dector4" hidden="true">
     <div class="container">
         <div class="header">
             <p class="logo">C  A  L  A  R</p>
@@ -113,7 +113,7 @@
                 <span>3 шаг</span>
                 <h1>Вот и всЁ!  </h1>
                 <p class="main__text-p">Ваше расписание готово</p>
-                <h4>https://www.</h4>
+                <h4 id="main__link">https://www.</h4>
                 <div class="btn__box">
                     <div class="btn__wrap">
                         <button class="btn_1"></button>

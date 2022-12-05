@@ -25,8 +25,6 @@ document.addEventListener('scroll', function() {
         }
 })
 
-
-
 function init() {
     let yourWrapperElement = document.getElementsByClassName("outer-wrapper")[0];
     let whateverEaseFunctionYouWant = remaningScrollDistance => { return remaningScrollDistance / 15 + 1 };
@@ -43,8 +41,30 @@ function init() {
     uss.setXStepLengthCalculator(whateverEaseFunctionYouWant, yourWrapperElement);
 }
 
+function is_valid() {
+  let group = document.getElementById("group").value;
+  let map_form = document.getElementById("map_form").value;
+  let department = document.getElementById("department").value;
+  let subgroup = document.getElementById("subgroup").value; 
+  let link = 'http://api.calar.ru/' + department + '/' + map_form + '/' + group;
+  if (subgroup != '') {
+    link += '?subgroup=' + subgroup;
+  }
+  console.log(link);
+  if (group != '') return link;
+  else alert("Некорректный ввод! Пожалуйста, повторите попытку"); return '';
+  // $.ajax({
+  //   url: link,
+  //   type: "GET",
+  //   crossDomain: true,
+  //   dataType: 'jsonp',
+  //   success: function() { return true; },
+  //   error: function() { alert("Некорректный ввод! Пожалуйста, повторите попытку"); return false;}
+  // })
+}
+
 $(function() {
-    $( ".btn_1" ).click(function() {
+    $( ".btn_1" ).on("click", function() {
       $( ".btn_1" ).addClass( "onclic", 250, validate());
     });
   
@@ -59,22 +79,32 @@ $(function() {
           $( ".btn_1" ).removeClass( "validate" );
         }, 300 );
       }
-    });
+  });
 
-    $(function() {
-        $( ".btn_2" ).click(function() {
-          $( ".btn_2" ).addClass( "onclic", 250, validate());
-        });
-      
-        function validate() {
-          setTimeout(function() {
-            $( ".btn_2" ).removeClass( "onclic" );
-            $( ".btn_2" ).addClass( "validate", 450, callback() );
-          }, 700 );
-        }
-          function callback() {
-            setTimeout(function() {
-              $( ".btn_2" ).removeClass( "validate" );
-            }, 300 );
-          }
-        });
+$(function() {
+    $( ".btn_2" ).on("click", function() {
+      $( ".btn_2" ).addClass( "onclic", 250, validate());
+    });
+  
+    function validate() {
+      setTimeout(function() {
+        $( ".btn_2" ).removeClass( "onclic" );
+        $( ".btn_2" ).addClass( "validate", 450, callback() );
+      }, 700 );
+    }
+      function callback() {
+        setTimeout(function() {
+          $( ".btn_2" ).removeClass( "validate" );
+        }, 300 );
+      }
+  });
+
+$(function() {
+  $( "#btn3" ).on("click", function() {
+    let link = is_valid();
+    if (link != '') {
+      $( "#main__link").text(link);
+      $( "#dector4" ).show();
+    }
+  });
+});
